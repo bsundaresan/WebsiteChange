@@ -291,7 +291,7 @@ def pollWebsites():
                         fileContents = getFileContents(site['shortname'])
                         i = 0
                         for content in parseResult['contents']:
-                                if content not in fileContents:
+                                if content not in fileContents and 'Vistor' not in content:
                                         changes += 1
 
                                         subject = '[' + site['shortname'] + '] ' + parseResult['titles'][i]
